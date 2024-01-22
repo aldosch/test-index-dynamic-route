@@ -1,3 +1,21 @@
+# Test `index` dynamic route
+
+Minimal example project to demonstrate issue when deploying routes containing `index` to Vercel.
+
+**Work around solution**
+Uses a directory such as `[index]/` with [dynamic route params](https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes) and returns 404 if anything other than `index` is used.
+
+- [👀 Page source](https://github.com/aldosch/test-index-dynamic-route/blob/main/src/app/project/%5BprojectId%5D/%5Bindex%5D/page.tsx)
+- [✅ Example deployment](https://test-index-dynamic-route.vercel.app/)
+
+**Error replication**
+Uses a directory such as `index/` and has the same functionality as above when run locally but always returns 404 when deployed.
+
+- [👀 Page source](https://github.com/aldosch/test-index-dynamic-route/blob/replicate-error/src/app/project/%5BprojectId%5D/index/page.tsx)
+- [❌ Example deployment](https://test-index-dynamic-route-git-replicate-error-aldovercel.vercel.app/)
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
